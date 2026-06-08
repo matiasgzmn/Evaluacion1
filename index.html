@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BiciUrbana - Cicletería Profesional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <h1>BiciUrbana</h1>
+            <h1>🚴 BiciUrbana</h1>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
@@ -22,67 +23,133 @@
     <main>
         <section id="inicio">
             <div class="hero">
-                <h2>Bienvenido a BiciUrbana</h2>
-                <p>Tu cicletería de confianza para el mantenimiento y reparación de tu bicicleta</p>
+                <div class="hero-content">
+                    <h2>Bienvenido a BiciUrbana</h2>
+                    <p>Tu cicletería de confianza para el mantenimiento y reparación de tu bicicleta</p>
+                    <a href="#servicios" class="btn-inicio">Conoce Nuestros Servicios</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Tienda de bicicletas" class="local-img">
+                </div>
             </div>
 
             <section id="servicios">
                 <h2>Nuestros Servicios</h2>
                 <div class="grid-servicios">
                     <article class="servicio">
+                        <div class="servicio-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
                         <h3>Mantenimiento General</h3>
                         <p>Revisión completa de tu bicicleta, ajuste de frenos, cambios y lubricación de cadena para un andar seguro y suave.</p>
+                        <div class="servicio-price">Desde $50</div>
                     </article>
                     <article class="servicio">
+                        <div class="servicio-icon">
+                            <i class="fas fa-circle-notch"></i>
+                        </div>
                         <h3>Reparación de Llantas</h3>
                         <p>Parches, cambios de cámaras y reparación de llantas pinchadas. Servicio rápido y confiable para que sigas en movimiento.</p>
+                        <div class="servicio-price">Desde $30</div>
                     </article>
                     <article class="servicio">
+                        <div class="servicio-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
                         <h3>Cambios y Accesorios</h3>
                         <p>Instalación de componentes de calidad, luces, candados y accesorios para personalizar tu bicicleta según tus necesidades.</p>
+                        <div class="servicio-price">Desde $40</div>
                     </article>
                 </div>
             </section>
         </section>
 
         <section id="nosotros">
-            <h2>Quiénes Somos</h2>
-            <p>
-                En BiciUrbana somos un equipo apasionado por las bicicletas y comprometido con la movilidad sostenible en la ciudad. 
-                Con más de 10 años de experiencia en el sector, hemos ganado la confianza de miles de ciclistas urbanos. 
-                Nuestra misión es brindar un servicio técnico de excelencia, accesible y amigable para todos. 
-                Creemos que la bicicleta es la mejor forma de desplazarse en la ciudad, y estamos aquí para asegurar que tu viaje sea seguro y agradable.
-            </p>
+            <div class="nosotros-container">
+                <div class="nosotros-text">
+                    <h2>Quiénes Somos</h2>
+                    <p>
+                        En BiciUrbana somos un equipo apasionado por las bicicletas y comprometido con la movilidad sostenible en la ciudad. 
+                        Con más de 10 años de experiencia en el sector, hemos ganado la confianza de miles de ciclistas urbanos. 
+                        Nuestra misión es brindar un servicio técnico de excelencia, accesible y amigable para todos. 
+                        Creemos que la bicicleta es la mejor forma de desplazarse en la ciudad, y estamos aquí para asegurar que tu viaje sea seguro y agradable.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Años de experiencia</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5000+</h3>
+                            <p>Clientes satisfechos</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Garantía de calidad</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros-image">
+                    <img src="https://images.unsplash.com/photo-1570070176657-ca4cce3a5c37?w=400&h=500&fit=crop" alt="Mecánico trabajando" class="mechanic-img">
+                </div>
+            </div>
         </section>
 
         <section id="contacto">
             <h2>Agendar Revisión</h2>
-            <form class="formulario-contacto">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+            <div class="contacto-container">
+                <form class="formulario-contacto">
+                    <div class="form-group">
+                        <label for="nombre"><i class="fas fa-user"></i> Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre aquí" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono"><i class="fas fa-phone"></i> Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+56 9 xxxx xxxx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="servicio"><i class="fas fa-check-circle"></i> Tipo de Servicio:</label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="mantenimiento">Mantenimiento General</option>
+                            <option value="llantas">Reparación de Llantas</option>
+                            <option value="accesorios">Cambios y Accesorios</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha"><i class="fas fa-calendar"></i> Fecha Preferida:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                    <button type="submit" class="btn-enviar">
+                        <i class="fas fa-paper-plane"></i> Agendar Cita
+                    </button>
+                </form>
+                <div class="contacto-info">
+                    <h3>📍 Ubicación</h3>
+                    <p>Calle Principal 123, Centro</p>
+                    <h3>📞 Teléfono</h3>
+                    <p>+56 9 1234 5678</p>
+                    <h3>🕐 Horario</h3>
+                    <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                    <p>Sábado: 10:00 AM - 4:00 PM</p>
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="servicio">Tipo de Servicio:</label>
-                    <select id="servicio" name="servicio" required>
-                        <option value="">Selecciona un servicio</option>
-                        <option value="mantenimiento">Mantenimiento General</option>
-                        <option value="llantas">Reparación de Llantas</option>
-                        <option value="accesorios">Cambios y Accesorios</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn-enviar">Agendar Cita</button>
-            </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 BiciUrbana. Todos los derechos reservados.</p>
+        <p>&copy; 2026 BiciUrbana. Todos los derechos reservados. 🚴‍♂️</p>
     </footer>
 </body>
 </html>
